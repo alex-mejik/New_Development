@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+
+
+</head>
+<body>
+    <h2>Links</h2>
+    <ol id="links"></ol>
+    <script>
+        var info = {
+            "full_name": "Ray Villalobos",
+            "title": "Staff Author",
+            "links": [
+                { "blog": "http://iviewsource.com" },
+                { "facebook": "http://facebook.com/iviewsource" },
+                 { "youtube": "http://www.youtube.com/planetoftheweb" },
+                { "podcast": "http://feeds.feedburner.com/authoredcontent" },
+                { "twitter": "http://twitter.com/planetoftheweb" }
+            ]
+        };
+        var output = "";
+
+        for (var i = 0; i <= info.links.length; i++) {
+            for (key  in info.links[i]) {
+                output += '<li>' +
+                     '<a href="' + info.links[i][key] + '">' + key + '</a>' +
+                     '</li>';
+            }
+        }
+
+        var update = document.getElementById('links');
+        update.innerHTML = output;
+
+    </script>
+
+
+
+</body>
+</html>
